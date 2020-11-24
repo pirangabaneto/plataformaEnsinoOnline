@@ -10,4 +10,8 @@ class Curso extends Model
     use HasFactory;
 
     protected $fillable = ['titulo', 'descricao'];
+
+    public function matricula(){
+        $this->hasMany('app\Models\Matricula');
+    }
 }
