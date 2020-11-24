@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3b407415-eb29-4f9b-979b-63bc45e18d43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Aluno.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Aluno.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +162,7 @@
       <updated>1606154284978</updated>
       <workItem from="1606154287199" duration="10839000" />
       <workItem from="1606210199015" duration="902000" />
-      <workItem from="1606211424727" duration="2793000" />
+      <workItem from="1606211424727" duration="3710000" />
     </task>
     <servers />
   </component>
