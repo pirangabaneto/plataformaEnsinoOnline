@@ -45,9 +45,9 @@ Route::namespace('API')->name('api.')->group(function(){
         Route::get('/{id}', [MatriculaController::class, 'show'])->name('mostrar_matriculas');
         Route::post('/', [MatriculaController::class, 'store'])->name('store_matricula');
         Route::put('/{id}', [MatriculaController::class, 'update'])->name('update_matricula');
-        Route::get('/alunosPorSexo', [MatriculaController::class, 'alunosPorSexo'])->name('sexo_matriculas');
-        Route::get('/alunosFaixaEtaria', [MatriculaController::class, 'alunosFaixaEtaria'])->name('faixa_etaria_matriculas');
-        Route::get('/alunosPorCurso', [MatriculaController::class, 'alunosPorCurso'])->name('alunos_curso_matriculas');
+        Route::get('/buscar/alunosPorSexo', [MatriculaController::class, 'alunosPorSexo'])->name('sexo_matriculas');
+        Route::get('/buscar/alunosFaixaEtaria', [MatriculaController::class, 'alunosFaixaEtaria'])->name('faixa_etaria_matriculas');
+        Route::get('/buscar/alunosPorCurso', [MatriculaController::class, 'alunosPorCurso'])->name('alunos_curso_matriculas');
         Route::delete('/{id}', [MatriculaController::class, 'delete'])->name('delete_matricula');
     });
 
