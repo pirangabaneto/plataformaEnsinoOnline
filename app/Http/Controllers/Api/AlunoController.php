@@ -30,6 +30,17 @@ class AlunoController extends Controller
         return response()->json($data);
     }
 
+    public function busca_nome($nome){
+        $data = ['data' => $this->aluno::where('nome', $nome)->first()];
+        return response()->json($data);
+    }
+
+    public function busca_email($email){
+        $data = ['data' => $this->aluno::where('email', $email)->first()];
+        return response()->json($data);
+    }
+
+
     public function store(Request $request){
         $alunoData = $request->all();
 

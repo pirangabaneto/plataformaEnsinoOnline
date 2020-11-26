@@ -25,6 +25,8 @@ Route::namespace('API')->name('api.')->group(function(){
     Route::prefix('/alunos')->group(function (){
         Route::get('/', [AlunoController::class, 'index'])->name('alunos');
         Route::get('/{id}', [AlunoController::class, 'show'])->name('mostrar_aluno');
+        Route::get('/buscaNome/{nome}', [AlunoController::class, 'busca_nome'])->name('busca_nome_aluno');
+        Route::get('/buscaEmail/{email}', [AlunoController::class, 'busca_email'])->name('busca_email_aluno');
         Route::post('/', [AlunoController::class, 'store'])->name('store_aluno');
         Route::put('/{id}', [AlunoController::class, 'update'])->name('update_aluno');
         Route::delete('/{id}', [AlunoController::class, 'delete'])->name('delete_aluno');
