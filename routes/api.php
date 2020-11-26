@@ -42,7 +42,9 @@ Route::namespace('API')->name('api.')->group(function(){
 
     Route::prefix('/matriculas')->group(function (){
         Route::get('/', [MatriculaController::class, 'index'])->name('matriculas');
+        Route::get('/{id}', [MatriculaController::class, 'show'])->name('mostrar_matriculas');
         Route::post('/', [MatriculaController::class, 'store'])->name('store_matricula');
+        Route::put('/{id}', [MatriculaController::class, 'update'])->name('update_matricula');
         Route::get('/alunosPorSexo', [MatriculaController::class, 'alunosPorSexo'])->name('sexo_matriculas');
         Route::get('/alunosFaixaEtaria', [MatriculaController::class, 'alunosFaixaEtaria'])->name('faixa_etaria_matriculas');
         Route::get('/alunosPorCurso', [MatriculaController::class, 'alunosPorCurso'])->name('alunos_curso_matriculas');

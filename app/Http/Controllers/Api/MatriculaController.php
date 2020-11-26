@@ -53,9 +53,29 @@ class MatriculaController extends Controller
     }
 
     public function index(){
-        $data = $this->todosAlunos();
+        $data = $this->matricula->all();
 
         return response()->json($data);
+    }
+
+    public function show($id){
+        $data = ['data' => $this->matricula->findOrFail($id)];
+        return response()->json($data);
+    }
+
+    public function update(Request $request, $id){
+        $matriculaData = $this->matricula->findOrFail($id);
+
+        $matriculaData->aluno_id = $request->aluno_id;
+        $matriculaData->curso_id = $request->curso_id;
+
+        $matriculaData->save();
+    }
+
+    public function delete(Matricula $id){
+        $id->delete();
+
+        return response()->json(['data' => ['msg' => 'Matricula removida com sucesso']]);
     }
 
     public function alunosFaixaEtaria(){
