@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Aluno;
+use App\Validator\AlunoValidator;
+use App\Validator\ValidationException;
 use Illuminate\Http\Request;
 
 class AlunoController extends Controller
@@ -16,6 +18,7 @@ class AlunoController extends Controller
 
     public function __construct(Aluno $aluno)
     {
+
         $this->aluno = $aluno;
     }
 
@@ -42,19 +45,32 @@ class AlunoController extends Controller
 
 
     public function store(Request $request){
-        $alunoData = $request->all();
+         try {
+            $alunoData = $request->all();
+            AlunoValidator::validate($alunoData);
+            $this->aluno->create($alunoData);
+        }catch (ValidationException $exception){
+            return response()->json( $exception->getValidator());
+        }
 
-        $this->aluno->create($alunoData);
     }
 
     public function update(Request $request, $id){
-        $alunoData = $this->aluno->findOrFail($id);
+        try {
+            $alunoData = $request->all();
+            AlunoValidator::validate($alunoData);
 
-        $alunoData->nome = $request->nome;
-        $alunoData->email = $request->email;
-        $alunoData->sexo = $request->sexo;
-        $alunoData->data_nascimento = $request->data_nascimento;
-        $alunoData->save();
+            $alunoData = $this->aluno->findOrFail($id);
+
+            $alunoData->nome = $request->nome;
+            $alunoData->email = $request->email;
+            $alunoData->sexo = $request->sexo;
+            $alunoData->data_nascimento = $request->data_nascimento;
+            $alunoData->save();
+        }catch (ValidationException $exception){
+            return response()->json( $exception->getValidator());
+        }
+
     }
 
     public function delete(Aluno $id){
