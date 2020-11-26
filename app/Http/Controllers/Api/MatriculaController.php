@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Aluno;
 use App\Models\Curso;
 use App\Models\Matricula;
+use App\Validator\MatriculaValidator;
+use App\Validator\ValidationException;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Date;
@@ -61,6 +63,23 @@ class MatriculaController extends Controller
     public function show($id){
         $data = ['data' => $this->matricula->findOrFail($id)];
         return response()->json($data);
+    }
+
+    public function store(Request $request){
+        try {
+            $data = $request->all();
+            MatriculaValidator::validate($data);
+
+            Aluno::findOrFail($request->aluno_id);
+            Curso::findOrFail($request->curso_id);
+
+            $matriculaData = $request->all();
+
+            $this->matricula->create($matriculaData);
+        }catch (ValidationException $exception){
+            return response()->json( $exception->getValidator());
+        }
+
     }
 
     public function update(Request $request, $id){
@@ -152,11 +171,5 @@ class MatriculaController extends Controller
         array_push($data, [`feminino` => $feminino]);
 
         return response()->json($data);
-    }
-
-    public function store(Request $request){
-        $matriculaData = $request->all();
-
-        $this->matricula->create($matriculaData);
     }
 }

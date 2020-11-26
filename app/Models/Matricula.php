@@ -11,6 +11,16 @@ class Matricula extends Model
 
     protected $fillable = ['aluno_id', 'curso_id'];
 
+    public static $rules =[
+        'aluno_id' => ['required',],
+        'curso_id' => ['required',],
+    ];
+
+    public static $messages = [
+        'aluno_id.*' => "Aluno é obrigatório",
+        'curso_id.*' => "Curso é obrigatorio.",
+    ];
+
     public function aluno(){
         return $this->belongsTo('app\Models\Aluno');
     }

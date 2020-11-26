@@ -21,9 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3b407415-eb29-4f9b-979b-63bc45e18d43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CursoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CursoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Curso.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Curso.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_23_194623_create_cursos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_23_194623_create_cursos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/MatriculaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/MatriculaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Matricula.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Matricula.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +189,7 @@
       <workItem from="1606211424727" duration="15601000" />
       <workItem from="1606297323190" duration="17599000" />
       <workItem from="1606401642278" duration="2858000" />
-      <workItem from="1606407420991" duration="6756000" />
+      <workItem from="1606407420991" duration="7356000" />
     </task>
     <servers />
   </component>
@@ -222,14 +221,14 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="464" y="27" width="486" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1299.741@67.27.1299.741" timestamp="1606236292049" />
-    <state x="449" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606415958325">
+    <state x="449" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606417168743">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="449" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1299.741@67.27.1299.741" timestamp="1606415958325" />
-    <state x="339" y="116" width="745" height="561" key="NewPhpClassDialog" timestamp="1606415644985">
+    <state x="449" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1299.741@67.27.1299.741" timestamp="1606417168743" />
+    <state x="339" y="116" width="745" height="561" key="NewPhpClassDialog" timestamp="1606416875338">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="339" y="116" width="745" height="561" key="NewPhpClassDialog/67.27.1299.741@67.27.1299.741" timestamp="1606415644985" />
+    <state x="339" y="116" width="745" height="561" key="NewPhpClassDialog/67.27.1299.741@67.27.1299.741" timestamp="1606416875338" />
     <state x="512" y="322" width="399" height="149" key="NewPhpFileDialog" timestamp="1606410720189">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
